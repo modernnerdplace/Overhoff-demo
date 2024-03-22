@@ -1,9 +1,8 @@
 from flask import Flask, request, send_file
 import os
-import datetime
 import requests
 
-pixel_filename = f"companyBranding.png"
+pixel_filename = "companyBranding.png"
 allowed_referers = ['login.microsoftonline.com',
         'login.microsoft.net',
         'login.microsoft.com',
