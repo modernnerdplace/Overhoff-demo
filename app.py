@@ -44,7 +44,7 @@ def main():
         if public_ip:
             print()
             print("[*] Embed this pixel in your CSS file with the following code:\n")
-            print("ext-sign-in-box {{")
+            print("ext-sign-in-box {")
             print(f" background-image: url('https://{public_ip}/{pixel_filename}');")
             print(f"    background-size: 0 0;")
             print("}")
