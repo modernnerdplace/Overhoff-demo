@@ -2,6 +2,10 @@ from flask import Flask, request, send_file
 import os
 import requests
 
+##if Teams webhook alerting wanted - uncomment below :
+#import pymsteams
+#myTeamsMessage = pymsteams.connectorcard("<Microsoft Webhook URL>") #replace with Teams Webhook URL
+
 pixel_filename = "companyBranding.png"
 allowed_referers = ['login.microsoftonline.com',
         'login.microsoft.net',
@@ -31,8 +35,10 @@ def pixel():
         print(f"[*] Requester IP (user logging in): {requester_ip}")
         print(f"[*] Referer header (AitM): {referer_header}")
         
-        #web hook / push to log AitM attack
-    
+        #Teams Webhook
+        #myTeamsMessage.text(f"[*] Requester IP (user logging in): {requester_ip} & Referer header (AitM): {referer_header}")
+        #myTeamsMessage.send()
+
     return send_file(filename, mimetype='image/png')
 
 def main():
