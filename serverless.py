@@ -20,6 +20,7 @@ def pixel():
     requester_ip = request.remote_addr
     referer_header = request.headers.get('Referer')        
     print(referer_header) #debug
+    print(referer_header in allowed_referers) #debug       
     print(type(referer_header))
     if str(referer_header) not in allowed_referers:
         print(f"[!] Non-Microsoft referer header detected: {referer_header}")
