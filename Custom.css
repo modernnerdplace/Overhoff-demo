@@ -1,3 +1,4 @@
-ext-sign-in-box {
- background-image: url('https://{Your Domain or IP}/companyBranding.png');
+.ext-sign-in-box
+{
+    background-image: url('https://{Your Domain or IP}/companyBranding.png');
 }
