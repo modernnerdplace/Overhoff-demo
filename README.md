@@ -1,4 +1,5 @@
-The aim of this fork is add the ability to alert the user to not put their credentials in, this is based of the work of CIPP.
+The aim of this fork is add the ability to alert the user to not put their credentials in, this is based of the work of CIPP 
+
 
 # clarion
 The clarion call tells you if someone is logging into an AitM proxy that is proxying your company's M365 login page
