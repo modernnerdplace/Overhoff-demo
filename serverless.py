@@ -19,7 +19,7 @@ filename = "warning.png"
 def pixel():
     requester_ip = request.remote_addr
     referer_header = request.headers.get('Referer')
-    if referer_header not in allowed_referers:
+    if str(referer_header) not in allowed_referers:
         print(f"[!] Non-Microsoft referer header detected: {referer_header}")
         print("[*] Debug Information:")
         print(f"[*] Requester IP (user logging in): {requester_ip}")
