@@ -1,4 +1,4 @@
-from flask import Flask, request, send_file#
+from flask import Flask, request, send_file
 
 ##if Teams webhook alerting wanted - uncomment below :
 #import pymsteams
@@ -17,7 +17,7 @@ filename = "warning.png"
 
 @app.route(f'/{pixel_filename}')
 def pixel():
-    requester_ip = request.remote_addr
+    #requester_ip = request.remote_addr  #To fix.
     referer_header = str(request.headers.get('Referer'))   
     referer_header = referer_header.replace("https://","").replace("/","")
     print(referer_header) #debug
@@ -25,10 +25,10 @@ def pixel():
     print(type(referer_header))
     if referer_header not in allowed_referers:
         print(f"[!] Non-Microsoft referer header detected: {referer_header}")
-        print(f"[*] Requester IP (user logging in): {requester_ip}")
         print(f"[*] Referer header (AitM): {referer_header}")
+        #print(f"[*] Requester IP (user logging in): {requester_ip}")    #To Fix.
         
-        #Teams Webhook
+        #Teams Webhook#
         #myTeamsMessage.text(f"[*] Requester IP (user logging in): {requester_ip} & Referer header (AitM): {referer_header}")
         #myTeamsMessage.send()
     else: 
