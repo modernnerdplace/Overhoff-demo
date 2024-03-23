@@ -13,7 +13,7 @@ allowed_referers = [
         'tasks.office.com',
         'login.windows.net']
 app = Flask(__name__)
-#filename = "warning.png"
+filename = "warning.png"
 
 @app.route(f'/{pixel_filename}')
 def pixel():
@@ -29,7 +29,7 @@ def pixel():
         #myTeamsMessage.send()
         return send_file(filename, mimetype='warning/png',as_attachment=False)
     else:
-        pass   
+        return send_file('safe.png', mimetype='warning/png',as_attachment=False) 
 
 
 
