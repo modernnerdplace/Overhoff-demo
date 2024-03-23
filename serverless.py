@@ -27,9 +27,9 @@ def pixel():
         #Teams Webhook#
         #myTeamsMessage.text(f"[*] Requester IP (user logging in): {requester_ip} & Referer header (AitM): {referer_header}")
         #myTeamsMessage.send()
-        return send_file(filename, mimetype='warning/png',as_attachment=False)
+        return send_file(filename, mimetype='image/png',as_attachment=False)
     else:
-        return send_file('safe.png', mimetype='warning/png',as_attachment=False) 
+        return send_file('safe.png', mimetype='image/png',as_attachment=False) 
 
 
 
