@@ -7,12 +7,13 @@ import requests
 #myTeamsMessage = pymsteams.connectorcard("<Microsoft Webhook URL>") #replace with Teams Webhook URL
 
 pixel_filename = "companyBranding.png"
-allowed_referers = ['login.microsoftonline.com',
-        'login.microsoft.net',
-        'login.microsoft.com',
-        'autologon.microsoftazuread-sso.com',
-        'tasks.office.com',
-        'login.windows.net']
+allowed_referers = [
+        'https://login.microsoftonline.com/',
+        'https://login.microsoft.net/',
+        'https://login.microsoft.com/',
+        'https://autologon.microsoftazuread-sso.com/',
+        'https://tasks.office.com/',
+        'https://login.windows.net/']
 app = Flask(__name__)
 filename = "warning.png"
 
