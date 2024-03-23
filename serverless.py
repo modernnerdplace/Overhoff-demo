@@ -20,10 +20,7 @@ def pixel():
     #requester_ip = request.remote_addr  #To fix.
     referer_header = str(request.headers.get('Referer'))   
     referer_header = referer_header.replace("https://","").replace("/","")
-    print(f"[*]{referer_header}") #debug
-    print(referer_header in allowed_referers) #debug       
-    print(type(referer_header))
-    if referer_header not in allowed_referers and referer_header != "None":
+    if referer_header not in allowed_referers:
         print(f"[!] Non-Microsoft referer header detected: {referer_header}")
         print(f"[*] Referer header (AitM): {referer_header}")
         #print(f"[*] Requester IP (user logging in): {requester_ip}")    #To Fix.
