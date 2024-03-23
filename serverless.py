@@ -24,13 +24,12 @@ def pixel():
         print(f"[!] Non-Microsoft referer header detected: {referer_header}")
         print(f"[*] Referer header (AitM): {referer_header}")
         #print(f"[*] Requester IP (user logging in): {requester_ip}")    #To Fix.
-        filename = "warning.png"
         #Teams Webhook#
         #myTeamsMessage.text(f"[*] Requester IP (user logging in): {requester_ip} & Referer header (AitM): {referer_header}")
         #myTeamsMessage.send()
-    else: 
-        filename = "safe.png" #debug
-    return send_file(filename, mimetype='image/png',as_attachment=False)
+        return send_file(filename, mimetype='warning/png',as_attachment=False)
+
+
 
 def main():
         app.run(debug=True)
