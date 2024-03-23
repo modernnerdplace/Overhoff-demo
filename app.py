@@ -30,16 +30,14 @@ def get_public_ip():
 def pixel():
     requester_ip = request.remote_addr
     referer_header = request.headers.get('Referer')
-    if referer_header not in allowed_referers:
+    if str(referer_header) not in allowed_referers:
         print(f"[!] Non-Microsoft referer header detected: {referer_header}")
         print("[*] Debug Information:")
         print(f"[*] Requester IP (user logging in): {requester_ip}")
         print(f"[*] Referer header (AitM): {referer_header}")
-        
         #Teams Webhook
         #myTeamsMessage.text(f"[*] Requester IP (user logging in): {requester_ip} & Referer header (AitM): {referer_header}")
         #myTeamsMessage.send()
-
     return send_file(filename, mimetype='image/png')
 
 def main():
