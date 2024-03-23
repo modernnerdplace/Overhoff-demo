@@ -13,7 +13,6 @@ allowed_referers = [
         'tasks.office.com',
         'login.windows.net']
 app = Flask(__name__)
-filename = "warning.png"
 
 @app.route(f'/{pixel_filename}')
 def pixel():
@@ -26,8 +25,8 @@ def pixel():
         #print(f"[*] Requester IP (user logging in): {requester_ip}")    #To Fix.
         #Teams Webhook#
         #myTeamsMessage.text(f"[*] Requester IP (user logging in): {requester_ip} & Referer header (AitM): {referer_header}")
-        #myTeamsMessage.send()
-        return send_file(filename, mimetype='image/png',as_attachment=False)
+        #myTeamsMessage.send()  
+        return send_file('warning.png', mimetype='image/png',as_attachment=False)
     else:
         return send_file('safe.png', mimetype='image/png',as_attachment=False) 
 
