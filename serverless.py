@@ -21,7 +21,7 @@ def pixel():
     referer_header = request.headers.get('Referer')        
     print(referer_header) #debug
     print(type(referer_header))
-    if str(referer_header) in allowed_referers:
+    if str(referer_header) not in allowed_referers:
         print(f"[!] Non-Microsoft referer header detected: {referer_header}")
         print(f"[*] Requester IP (user logging in): {requester_ip}")
         print(f"[*] Referer header (AitM): {referer_header}")
