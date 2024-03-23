@@ -6,19 +6,19 @@ from flask import Flask, request, send_file#
 
 pixel_filename = "companyBranding.png"
 allowed_referers = [
-        'https://login.microsoftonline.com/',
-        'https://login.microsoft.net/',
-        'https://login.microsoft.com/',
-        'https://autologon.microsoftazuread-sso.com/',
-        'https://tasks.office.com/',
-        'https://login.windows.net/']
+        'login.microsoftonline.com',
+        'login.microsoft.net',
+        'login.microsoft.com',
+        'autologon.microsoftazuread-sso.com',
+        'tasks.office.com',
+        'login.windows.net']
 app = Flask(__name__)
 filename = "warning.png"
 
 @app.route(f'/{pixel_filename}')
 def pixel():
     requester_ip = request.remote_addr
-    referer_header = request.headers.get('Referer')        
+    referer_header = request.headers.get('Referer').replace("https://","").replace("/","")        
     print(referer_header) #debug
     print(referer_header in allowed_referers) #debug       
     print(type(referer_header))
