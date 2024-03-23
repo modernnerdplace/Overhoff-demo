@@ -21,9 +21,9 @@ def pixel():
     referer_header = request.headers.get('Referer')
     if str(referer_header) not in allowed_referers:
         print(f"[!] Non-Microsoft referer header detected: {referer_header}")
-        print("[*] Debug Information:")
         print(f"[*] Requester IP (user logging in): {requester_ip}")
         print(f"[*] Referer header (AitM): {referer_header}")
+        
         #Teams Webhook
         #myTeamsMessage.text(f"[*] Requester IP (user logging in): {requester_ip} & Referer header (AitM): {referer_header}")
         #myTeamsMessage.send()
