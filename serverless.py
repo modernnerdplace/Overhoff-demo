@@ -19,7 +19,9 @@ filename = "warning.png"
 def pixel():
     requester_ip = request.remote_addr
     if len(request.headers.get('Referer')) > 0:
-            referer_header = request.headers.get('Referer').replace("https://","").replace("/","")        
+            referer_header = request.headers.get('Referer').replace("https://","").replace("/","")
+    else:
+            filename = "safe.png" 
     print(referer_header) #debug
     print(referer_header in allowed_referers) #debug       
     print(type(referer_header))
