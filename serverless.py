@@ -18,10 +18,8 @@ filename = "warning.png"
 @app.route(f'/{pixel_filename}')
 def pixel():
     requester_ip = request.remote_addr
-    if len(request.headers.get('Referer')) > 0:
-            referer_header = request.headers.get('Referer').replace("https://","").replace("/","")
-    else:
-            filename = "safe.png" 
+    referer_header = str(request.headers.get('Referer'))   
+    referer_header = referer_header.replace("https://","").replace("/","")
     print(referer_header) #debug
     print(referer_header in allowed_referers) #debug       
     print(type(referer_header))
