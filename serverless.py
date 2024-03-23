@@ -13,7 +13,7 @@ allowed_referers = [
         'tasks.office.com',
         'login.windows.net']
 app = Flask(__name__)
-filename = "warning.png"
+#filename = "warning.png"
 
 @app.route(f'/{pixel_filename}')
 def pixel():
@@ -24,7 +24,7 @@ def pixel():
         print(f"[!] Non-Microsoft referer header detected: {referer_header}")
         print(f"[*] Referer header (AitM): {referer_header}")
         #print(f"[*] Requester IP (user logging in): {requester_ip}")    #To Fix.
-        
+        filename = "warning.png"
         #Teams Webhook#
         #myTeamsMessage.text(f"[*] Requester IP (user logging in): {requester_ip} & Referer header (AitM): {referer_header}")
         #myTeamsMessage.send()
