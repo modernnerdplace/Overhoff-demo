@@ -4,8 +4,7 @@ from flask import Flask, request, send_file
 #import pymsteams
 #myTeamsMessage = pymsteams.connectorcard("<Microsoft Webhook URL>") #replace with Teams Webhook URL
 
-pixel_filename = "companyBranding.png"
-filename = "warning.png" #Debug
+global filename = "warning.png" #Debug
 allowed_referers = [
         'login.microsoftonline.com',
         'login.microsoft.net',
@@ -15,7 +14,7 @@ allowed_referers = [
         'login.windows.net']
 app = Flask(__name__)
 
-@app.route(f'/{pixel_filename}')
+@app.route('/companyBranding.png')
 def pixel():
     #requester_ip = request.remote_addr  #To fix.
     referer_header = str(request.headers.get('Referer'))   
@@ -30,8 +29,6 @@ def pixel():
         return send_file('warning.png', mimetype='image/png',as_attachment=False)
     else:
         return send_file('safe.png', mimetype='image/png',as_attachment=False) 
-
-
 
 def main():
         app.run(debug=True)
