@@ -5,6 +5,7 @@ from flask import Flask, request, send_file
 #myTeamsMessage = pymsteams.connectorcard("<Microsoft Webhook URL>") #replace with Teams Webhook URL
 
 pixel_filename = "companyBranding.png"
+filename = "warning.png" #Debug
 allowed_referers = [
         'login.microsoftonline.com',
         'login.microsoft.net',
@@ -13,7 +14,6 @@ allowed_referers = [
         'tasks.office.com',
         'login.windows.net']
 app = Flask(__name__)
-filename = "warning.png" #Debug
 
 @app.route(f'/{pixel_filename}')
 def pixel():
