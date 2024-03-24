@@ -6,7 +6,6 @@ import requests
 #import pymsteams
 #myTeamsMessage = pymsteams.connectorcard("<Microsoft Webhook URL>") #replace with Teams Webhook URL
 
-pixel_filename = "companyBranding.png"
 allowed_referers = [
         'login.microsoftonline.com',
         'login.microsoft.net',
