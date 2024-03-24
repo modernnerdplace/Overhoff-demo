@@ -14,7 +14,7 @@ allowed_referers = [
         'login.windows.net']
 app = Flask(__name__)
 
-@app.route('/companyBranding.png')
+@app.route('/companyBranding.png', methods=['GET'])
 def pixel():
     #requester_ip = request.remote_addr  #To fix.
     referer_header = str(request.headers.get('Referer'))   
