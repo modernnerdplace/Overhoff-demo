@@ -1,6 +1,11 @@
-The aim of this fork is add the ability to alert the user to not put their credentials in, this is based of the work of CIPP. Additionally I added supporting code for a teams webhook for alerting. 
+The aim of this fork is add the ability to alert the user to not put their credentials in, this is based of the work of CIPP. Additionally I added supporting code for a teams webhook for alerting. Note that this can be defeated trivially by rewriting the CSS (see https://nicolasuter.medium.com/aitm-phishing-with-azure-functions-a1530b52df05)
 
 I needed a "serverless" solution for hosting for VPS and a local one so I've included both, deploy whichever you need! (gunicorn app:app)  
+![image](https://github.com/jkerai1/clarion/assets/55988027/79848295-0c26-4b98-9ba7-80c3119a004e)
+
+Server-side:
+![image](https://github.com/jkerai1/clarion/assets/55988027/c9ff7224-954d-412b-9d70-bf6e9590c457)
+
 
 # clarion
 The clarion call tells you if someone is logging into an AitM proxy that is proxying your company's M365 login page
