@@ -1,4 +1,4 @@
-The aim of this fork is add the ability to alert the user to not put their credentials in against AiTM/Evilgnix, this is based of the work of CIPP. Additionally I added supporting code for a teams webhook for alerting. Note that this can be defeated trivially by rewriting the CSS (see https://nicolasuter.medium.com/aitm-phishing-with-azure-functions-a1530b52df05)
+The aim of this fork is add the ability to alert the user to not put their credentials in against AiTM/Evilgnix, this is based of the work of CIPP. Additionally I added supporting code for a teams webhook for alerting SecOps Teams. Note that this can be defeated trivially by rewriting the CSS (see https://nicolasuter.medium.com/aitm-phishing-with-azure-functions-a1530b52df05)
 
 I needed a "serverless" solution for hosting for VPS and a local one so I've included both, deploy whichever you need! (gunicorn app:app)  
 ![image](https://github.com/jkerai1/clarion/assets/55988027/79848295-0c26-4b98-9ba7-80c3119a004e)
