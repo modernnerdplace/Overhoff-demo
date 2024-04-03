@@ -6,6 +6,7 @@ I needed a "serverless" solution for hosting for VPS and a local one so I've inc
 Server-side:
 ![image](https://github.com/jkerai1/clarion/assets/55988027/c9ff7224-954d-412b-9d70-bf6e9590c457)
 
+See Defending against AiTMs/Phishing: https://www.linkedin.com/posts/jay-kerai-cyber_devfender-entra-token-activity-7122902992873287681-P03M
 
 # clarion
 The clarion call tells you if someone is logging into an AitM proxy that is proxying your company's M365 login page
