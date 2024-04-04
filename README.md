@@ -8,6 +8,10 @@ Server-side:
 
 See Defending against AiTMs/Phishing: https://www.linkedin.com/posts/jay-kerai-cyber_devfender-entra-token-activity-7122902992873287681-P03M
 
+Example of being served back "safe.png":
+
+![image](https://github.com/jkerai1/clarion/assets/55988027/c583b3f8-8dff-4378-a3f8-594be3b63536)
+
 # clarion
 The clarion call tells you if someone is logging into an AitM proxy that is proxying your company's M365 login page
 
