@@ -16,15 +16,15 @@ app = Flask(__name__)
 
 @app.route('/companyBranding.png', methods=['GET'])
 def pixel():
-    #requester_ip = request.remote_addr  #To fix.
     referer_header = str(request.headers.get('Referer'))   
     referer_header = referer_header.replace("https://","").replace("/","")
     if (referer_header not in allowed_referers) and (referer_header is not None) and (len(referer_header) > 1):
         print(f"[!] Non-Microsoft referer header detected: {referer_header}")
         print(f"[*] Referer header (AitM): {referer_header}")
+        #requester_ip = request.remote_addr  #To fix.
         #print(f"[*] Requester IP (user logging in): {requester_ip}")    #To Fix.
         #Teams Webhook#
-        #myTeamsMessage.text(f"[*] Requester IP (user logging in): {requester_ip} & Referer header (AitM): {referer_header}")
+        #myTeamsMessage.text(f"[*] Referer header (AitM): {referer_header}")
         #myTeamsMessage.send()  
         return send_file('warning.png', mimetype='image/png',as_attachment=False)
     else:
