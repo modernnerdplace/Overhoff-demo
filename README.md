@@ -28,6 +28,7 @@ This is **extremely** experimental and can be defeated:
 
 ![image](https://github.com/user-attachments/assets/a4ea4c5e-5387-471b-a0ed-37c0d9977640)  
 
+Here is a good example of swapping referrer to appear legitimate https://github.com/rvdwegen/vdwegen-api/blob/main/tenantDetails/run.ps1#L106  
 
 ## Concept & Disclaimer
 [This article](https://zolder.io/using-honeytokens-to-detect-aitm-phishing-attacks-on-your-microsoft-365-tenant/) from Zolder describes the concept quite well. This is not my original idea and the credit goes to them for it.
