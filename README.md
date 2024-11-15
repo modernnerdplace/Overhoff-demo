@@ -20,7 +20,14 @@ The clarion call tells you if someone is logging into an AitM proxy that is prox
 ![image](https://github.com/HuskyHacks/clarion/assets/57866415/58627a15-8beb-43d5-a0f1-4172f9da8653)
 
 ## Warning
-This is **extremely** experimental.
+This is **extremely** experimental and can be defeated:
+
+![image](https://github.com/user-attachments/assets/2f3c345a-0bb8-4946-b8c1-e31390e0c0ca)  
+
+![image](https://github.com/user-attachments/assets/5dbdbfcd-e366-429a-9b65-155f6897bf1a)  
+
+![image](https://github.com/user-attachments/assets/a4ea4c5e-5387-471b-a0ed-37c0d9977640)  
+
 
 ## Concept & Disclaimer
 [This article](https://zolder.io/using-honeytokens-to-detect-aitm-phishing-attacks-on-your-microsoft-365-tenant/) from Zolder describes the concept quite well. This is not my original idea and the credit goes to them for it.
@@ -110,3 +117,4 @@ I'm willing to bet that this works with login pages for any service that allows 
 Thank you again to Zolder for the original article on this technique!
 
 - https://zolder.io/using-honeytokens-to-detect-aitm-phishing-attacks-on-your-microsoft-365-tenant/
+
