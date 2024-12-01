@@ -14,6 +14,13 @@ Example of being served back "safe.png":
 
 ![image](https://github.com/jkerai1/clarion/assets/55988027/c583b3f8-8dff-4378-a3f8-594be3b63536)
 
+CSS:
+```
+.ext-sign-in-box
+{
+    background-image: url('https://{Your Domain or IP}/companyBranding.png');
+}
+```
 # clarion
 The clarion call tells you if someone is logging into an AitM proxy that is proxying your company's M365 login page
 
