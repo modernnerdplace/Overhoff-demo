@@ -25,6 +25,7 @@ CSS:
 ```
 
 # Deploying to Azure Guide
+> Deploying to Azure will also unlock event hub intergrations for any further automation!
 
 We can use a web App to do this with the gunicorn startup command (gunicorn app:app)  
 ![image](https://github.com/user-attachments/assets/0e4fbd46-ddf7-45b0-88f0-bb1b15c72af1)  
