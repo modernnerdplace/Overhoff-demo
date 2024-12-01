@@ -6,6 +6,8 @@ I needed a "serverless" solution for hosting for VPS and a local one so I've inc
 ![image](https://github.com/jkerai1/clarion/assets/55988027/79848295-0c26-4b98-9ba7-80c3119a004e)
 
 Server-side:
+> Output below is from onrender free tier
+
 ![image](https://github.com/jkerai1/clarion/assets/55988027/c9ff7224-954d-412b-9d70-bf6e9590c457)
 
 See Defending against AiTMs/Phishing: https://www.linkedin.com/posts/jay-kerai-cyber_devfender-entra-token-activity-7122902992873287681-P03M & https://github.com/jkerai1/So-You-ve-Got-MFA-Defending-and-Responding-Against-MFA-Bypass-Techniques-in-Entra
@@ -21,6 +23,21 @@ CSS:
     background-image: url('https://{Your Domain or IP}/companyBranding.png');
 }
 ```
+
+# Deploying to Azure Guide
+
+We can use a web App to do this with the gunicorn startup command (gunicorn app:app)  
+![image](https://github.com/user-attachments/assets/0e4fbd46-ddf7-45b0-88f0-bb1b15c72af1)  
+
+I have used github auth with github action to auto deploy:  
+![image](https://github.com/user-attachments/assets/183afa36-9886-41dd-ac2c-21840aedd12a)  
+
+Then we add the web app URL (Optionally we can bind our web app to a custom domain) to our CSS to be uploaded to company branding in Entra (see CSS Above)  
+
+![image](https://github.com/user-attachments/assets/e3a966d2-3ce8-4d54-9ae1-e0850ed07c84)
+
+# Clarions original ReadMe with some edits:
+
 # clarion
 The clarion call tells you if someone is logging into an AitM proxy that is proxying your company's M365 login page
 
