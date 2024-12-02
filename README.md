@@ -1,12 +1,12 @@
 See Write-up: https://www.linkedin.com/pulse/punishing-aitms-using-css-flask-jay-kerai-ffrhe  
  
-The aim of this fork is add the ability to alert the user to not put their credentials in against AiTM/Evilgnix, this is based of the work of CIPP. Additionally I added supporting code for a teams webhook for alerting SecOps Teams. Note that this can be defeated trivially by rewriting the CSS (see https://nicolasuter.medium.com/aitm-phishing-with-azure-functions-a1530b52df05) You can however flip the logic and only get users to authenticate ONLY if they see the "safe" image as the sign-in box background. This would severly hinder distributed attacks, however targeted attacks would still be possible. (Ideally this should be unique across all tenants to mitigate any CSS manipulation)
+The aim of this fork is add the ability to alert the user to not put their credentials in against AiTM/Evilgnix, this is based of the work of CIPP. Additionally I added supporting code for a teams webhook for alerting SecOps Teams. Note that this can be defeated trivially by rewriting the CSS (see https://nicolasuter.medium.com/aitm-phishing-with-azure-functions-a1530b52df05) You can however flip the logic and only get users to authenticate __ONLY__ if they see the "safe" image as the sign-in box background. This would severly hinder distributed attacks, however targeted attacks would still be possible. (Ideally this should be unique across all tenants to mitigate any CSS manipulation)
 
 I needed a "serverless" solution for hosting for VPS and a local one so I've included both, deploy whichever you need! (gunicorn app:app)  
 ![image](https://github.com/jkerai1/clarion/assets/55988027/79848295-0c26-4b98-9ba7-80c3119a004e)
 
 Server-side:
-> Output below is from onrender free tier
+> Output below is from Render free tier
 
 ![image](https://github.com/jkerai1/clarion/assets/55988027/c9ff7224-954d-412b-9d70-bf6e9590c457)
 
@@ -32,7 +32,7 @@ We can use a web App to do this with the gunicorn startup command (gunicorn app:
 I have used github auth with github action to auto deploy:  
 ![image](https://github.com/user-attachments/assets/183afa36-9886-41dd-ac2c-21840aedd12a)  
 
-Then we add the web app URL (Optionally we can bind our web app to a custom domain) to our CSS to be uploaded to company branding in Entra (see CSS Above)  
+Then we add the web app URL (Optionally we can bind our web app to a custom domain) to our CSS to be uploaded to company branding in Entra (see CSS Above). Azure can handle the TLS/SSL for us too.    
 
 ![image](https://github.com/user-attachments/assets/e3a966d2-3ce8-4d54-9ae1-e0850ed07c84)
 
