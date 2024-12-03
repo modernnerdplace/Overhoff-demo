@@ -29,7 +29,7 @@ CSS:
 We can use a web App to do this with the gunicorn startup command (gunicorn app:app)  
 ![image](https://github.com/user-attachments/assets/0e4fbd46-ddf7-45b0-88f0-bb1b15c72af1)  
 
-I have used github auth with github action to auto deploy:  
+I have used github auth with github action to auto deploy. I suggest forking the repo first and authorize to your own fork:  
 ![image](https://github.com/user-attachments/assets/183afa36-9886-41dd-ac2c-21840aedd12a)  
 
 Then we add the web app URL (Optionally we can bind our web app to a custom domain) to our CSS to be uploaded to company branding in Entra (see CSS Above). Azure can handle the TLS/SSL for us too.    
